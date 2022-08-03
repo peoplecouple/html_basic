@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상세페이지 02</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    .container {
+      display: flex;
+      width: 1170px;
+      margin: 0 auto;
+    }
+
+    .t_b {
+      color: #0d6efd;
+    }
+
+    .dotList li {
+      position: relative;
+      padding: 0 0 0 20px;
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+
+    .dotList li::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #0d6efd;
+    }
+
+    .business {
+      padding: 100px 0px;
+      /* letter-spacing: -0.025em;
+      font-size: 15px; */
+    }
+
+    .business h2 {
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .business h2::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin: 15px auto;
+      background: #0d6efd;
+    }
+
+    .business>p {
+      margin: 0 0 50px 0;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .business .container img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .business figure {
+      position: relative;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .business figure~figure {
+      border-left: 2px solid transparent;
+    }
+
+    .business figure .cover {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 10px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      transition: left 0.5s;
+    }
+
+    .business figure:hover .cover {
+      left: 0%;
+    }
+
+    .business figure .cover a {
+      display: inline-block;
+      /* flex때문에 쫙 늘어난 상황 
+      .cover align-items: flex-start; 로 고침*/
+      flex-grow: 0;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 10px 15px;
+      margin-top: auto;
+    }
+
+    .business figure h3 {
+      align-self: stretch;
+      /* align-self는 플렉스 자식에게 주면 됨 */
+      /* width 100%도 쓸 수 있다. */
+      font-size: 21px;
+      font-weight: 500;
+      padding: 0 0 20px 0;
+      margin: 0 0 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .business figure p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.25;
+    }
+
+    .business .inner {
+      width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .business .inner::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .business .inner>div {
+      float: left;
+      width: 50%;
+      padding: 0 15px;
+    }
+
+    .business .container {
+      margin: 0 auto 100px auto;
+    }
+
+    .business .tit strong {
+      position: relative;
+      display: block;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding: 0 0 0 15px;
+    }
+
+    .business .tit p {
+      font-size: 15px;
+      font-weight: 300;
+      padding: 0 0 0 15px;
+    }
+
+    .business .tit strong::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100px;
+      background: #0d6efd;
+      ;
+    }
+
+    /* * {
+      outline: 1px solid #f00;
+    } */
+  </style>
+</head>
+<!-- 플롯은 떠서 부모의 높이를 없애버린다! -->
+
+<body>
+  <section class="business">
+    <h2><span class="t_b">OUR </span>BUSINESS</h2>
+    <p>새로운 미래를 열어가는 무도상회</p>
+    <div class="container">
+      <figure>
+        <div class="inbox">
+          <img src="img/building01.jpg" alt="">
+        </div>
+        <div class="cover">
+          <h3>주요사업 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, nesciunt.</p>
+          <a href="">자세히보기</a>
+        </div>
+      </figure>
+      <figure>
+        <div class="inbox">
+          <img src="img/building02.jpg" alt="">
+        </div>
+        <div class="cover">
+          <h3>주요사업 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, nesciunt.
+            consectetur adipisicing elit.</p>
+          <a href="">자세히보기</a>
+        </div>
+      </figure>
+      <figure>
+        <div class="inbox">
+          <img src="img/building03.jpg" alt="">
+        </div>
+        <div class="cover">
+          <h3>주요사업 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, nesciunt.</p>
+          <a href="">자세히보기</a>
+        </div>
+      </figure>
+      <figure>
+        <div class="inbox">
+          <img src="img/building04.jpg" alt="">
+        </div>
+        <div class="cover">
+          <h3>주요사업 4</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, nesciunt.</p>
+          <a href="">자세히보기</a>
+        </div>
+      </figure>
+    </div>
+    <div class="inner">
+      <div class="tit">
+        <strong>심플하지만 다 갖춘 테마</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolore debitis autem.</p>
+      </div>
+      <div class="list">
+        <ul class="dotList">
+          <li>Lorem ipsum dolor </li>
+          <li>sit amet consectetur orem ipsum dolor orem ipsum dolor orem ipsum dolor</li>
+          <li>dipisicing elit</li>
+          <li>Nobis, cupiditate</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
