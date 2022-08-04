@@ -1,0 +1,273 @@
+/* Nav */
+.Nav {
+  margin: 100px 0;
+  line-height: 50px;
+  border-top: 1px solid var(--gc);
+  border-bottom: 1px solid var(--gc);
+}
+
+.Nav ul{
+  display: flex;
+  justify-content: center;
+}
+.Nav ul>li{
+padding: 0 20px;
+}
+
+.Nav ul>li~li{
+  border-left: 1px solid var(--gc);
+}
+/* section01 */
+
+.mainColor {
+  color: var(--mc);
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 1170px;
+  gap: 30px;
+}
+
+.about {
+  padding: 100px 0px;
+  letter-spacing: -0.025em;
+  font-size: 15px;
+}
+
+.about img {
+  width: 100%;
+}
+
+.about .container {
+  margin: 0 auto 100px auto;
+  justify-content: space-between;
+}
+
+.about .title {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0 0 50px 0;
+  line-height: 1.45;
+}
+
+.about .container p {
+  margin: 0 0 30px 0;
+  line-height: 1.45;
+}
+
+.about figure {
+  height: 400px;
+  overflow: hidden;
+}
+
+.about .inner {
+  width: 1170px;
+}
+
+.about h3 {
+  position: relative;
+  font-size: 23px;
+  font-weight: 500;
+  padding: 0 0 0 10px;
+  margin: 0 0 30px 0;
+}
+
+.about h3::before {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  content: "";
+  width: 3px;
+  height: 20px;
+  background: var(--mc);
+}
+
+/* section02 */
+
+.business .container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.business figure {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.business figure~figure {
+  border-left: 2px solid transparent;
+}
+
+.business figure .cover {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 10px;
+  background: rgba(0, 0, 0, 0.75);
+  color: var(--wc);
+  transition: left 0.5s;
+}
+
+.business figure:hover .cover {
+  left: 0%;
+}
+
+.business figure .cover a {
+  display: inline-block;
+  /* flex때문에 쫙 늘어난 상황 
+  .cover align-items: flex-start; 로 고침*/
+  flex-grow: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 15px;
+  margin-top: auto;
+}
+
+.business figure h3 {
+  align-self: stretch;
+  /* align-self는 플렉스 자식에게 주면 됨 */
+  /* width 100%도 쓸 수 있다. */
+  font-size: 21px;
+  font-weight: 500;
+  padding: 0 0 20px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.business figure p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.business .inner>div {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.business .container {
+  margin: 0 auto 100px auto;
+}
+
+.business .tit strong {
+  position: relative;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 0 0 0 15px;
+}
+
+.business .tit p {
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0 0 0 15px;
+}
+
+.business .tit strong::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100px;
+  background: var(--mc);
+  ;
+}
+
+/* section03 */
+
+
+.business02 .container {
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.business02 .container>div {
+  flex: 1;
+}
+
+.business02 .left img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.business02 .right {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--mc);
+  padding: 40px 0 0 0;
+}
+
+.business02 h3 {
+  font-size: 31px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.business02 .right p {
+  margin-bottom: 30px;
+}
+
+.business02 .right .bottom {
+  margin: auto 0 0 0;
+  background: var(--lc);
+  padding: 20px 15px 40px 20px;
+  border-top: 1px solid var(--gc);
+  line-height: 1.2;
+}
+
+.business02 .inner {
+  padding: 0 15px;
+}
+
+.business02 .inner h3 {
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.business02 .inner h3::before {
+  content: "/";
+  color: var(--mc);
+  font-size: 15px;
+  font-weight: 900;
+  margin: 0 5px 0 0;
+  display: inline-block;
+  /* transform 먹으려면 박스가 되야하므로 display로 박스를 만들어준다. */
+  transform: translateY(-10px) rotate(20deg);
+}
+
+
+.business02 .inner ul {
+  padding: 10px 0 15px 0;
+  border-top: 1px solid var(--dc);
+  border-bottom: 1px solid var(--dc);
+}
+
+.business02 .inner ul>li {
+  float: left;
+  padding: 5px 0;
+  width: 50%;
+}
+
+.business02 .inner ul>li::before {
+  content: attr(data-num);
+  display: inline-block;
+  padding: 5px;
+  color: var(--lc);
+  background: var(--dc);
+  border-radius: 13px;
+  margin: 0 15px 0 0;
+  font-style: italic;
+}
